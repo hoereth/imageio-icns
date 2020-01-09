@@ -4,7 +4,7 @@ Allows Java's ImageIO to write the [Apple Icon Image Format](https://en.wikipedi
 
 Restrictions: Only one resolution will be included in the output file. Reading is not supported, just writing.
 
-## Acceptable ICNS pixel dimensions / type identifiers
+## Acceptable ICNS pixel dimensions / internal type identifiers
 
 | pixel size | @1x         | @2x           |
 |------------|-------------|---------------|
