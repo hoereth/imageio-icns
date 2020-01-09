@@ -2,7 +2,7 @@
 
 Allows Java's ImageIO to write the [Apple Icon Image Format](https://en.wikipedia.org/wiki/Apple_Icon_Image_format).
 
-Restrictions: Only one resolution will be included in the output file.
+Restrictions: Only one resolution will be included in the output file. Reading is not supported, just writing.
 
 Allowed dimensions: 16x16, 32x32, 64x64, 128x128, 256x256, 512x512.
 
