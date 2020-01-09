@@ -1,4 +1,4 @@
-# ImageIO Plugin for writing ICNS (Apple Icon) Images
+# 🍏 ImageIO Plugin for writing ICNS (Apple Icon) Images
 
 Allows Java's ImageIO framework to write the [Apple Icon Image Format](https://en.wikipedia.org/wiki/Apple_Icon_Image_format).
 
