@@ -1,4 +1,4 @@
-package info.hoereth.imageio.icns;
+package de.pentabyte.imageio.icns;
 
 import java.util.ArrayList;
 import java.util.Arrays;

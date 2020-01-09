@@ -1,4 +1,4 @@
-package info.hoereth.imageio.icns;
+package de.pentabyte.imageio.icns;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -17,6 +17,9 @@ import javax.imageio.stream.ImageOutputStream;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import de.pentabyte.imageio.icns.ICNSImageWriter;
+import de.pentabyte.imageio.icns.ICNSWriteParam;
 
 public class ICNSWriterTest {
 	@Test

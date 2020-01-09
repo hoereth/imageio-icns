@@ -1,6 +1,8 @@
-package info.hoereth.imageio.icns;
+package de.pentabyte.imageio.icns;
 
 import org.junit.Test;
+
+import de.pentabyte.imageio.icns.OSType;
 
 public class OSTypeTest {
 	@Test
