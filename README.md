@@ -18,7 +18,7 @@ Restrictions: Only one resolution will be included in the output file. Reading i
 
 You must provide an input image with equal width and height of an acceptable pixel size.
 The plugin will always try to match a @2x resolution ICNS type identifier, otherwise
-it will fall back to @1x resolution ICNS type. You can change this default behavior with an ICNSWriteParam:
+it will fall back to @1x resolution ICNS type. You can change this default behavior with the ICNSWriteParam:
 
 ```java
 ICNSWriteParam param = new ICNSWriteParam();
