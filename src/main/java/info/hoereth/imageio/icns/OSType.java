@@ -2,7 +2,6 @@ package info.hoereth.imageio.icns;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -11,7 +10,7 @@ import java.util.stream.Collectors;
  */
 public enum OSType {
 	icp4(16, 1), icp5(32, 1), icp6(64, 1), ic07(128, 1), ic08(256, 1), ic09(512, 1), ic10(1024, 2), ic11(32, 2),
-	ic12(64, 2), ic13(256, 2);
+	ic12(64, 2), ic13(256, 2), ic14(512, 2);
 
 	private final int pixelSize;
 	private final int devicePixelRatio;

@@ -55,7 +55,16 @@ public class ICNSImageWriter extends ImageWriter {
 		if (renderedImage.getWidth() != renderedImage.getHeight()) {
 			throw new RuntimeException("image size must be square.");
 		}
-		OSType type = OSType.valueOf(renderedImage.getWidth());
+		
+		int devicePixelRatio;
+		if (param!=null) {
+			ICNSWriteParam writeParam = (ICNSWriteParam) param;
+			devicePixelRatio = writeParam.getDevicePixelRatio();
+		} else {
+			devicePixelRatio = 2;
+		}
+		
+		OSType type = OSType.valueOf(renderedImage.getWidth(), devicePixelRatio);
 
 		Iterator<ImageWriter> writers = ImageIO.getImageWritersBySuffix("png");
 		if (writers.hasNext()) {

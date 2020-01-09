@@ -6,12 +6,14 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.geom.RoundRectangle2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.Iterator;
 
+import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriter;
+import javax.imageio.stream.ImageOutputStream;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -26,8 +28,66 @@ public class ICNSWriterTest {
 	@Test
 	public void createICNSfromPng() throws IOException {
 		BufferedImage i = createExampleImage(64);
-		boolean success = ImageIO.write(i, "ICNS", new File("/Users/mick/Documents/eclipse/imageio-icns/test.icns"));
+		boolean success = ImageIO.write(i, "ICNS", new ByteArrayOutputStream());
 		Assert.assertTrue("no writer has been found", success);
+	}
+	
+	@Test
+	public void test_file_type_ic09() throws IOException {
+		BufferedImage i = createExampleImage(512);
+		
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		
+		ICNSWriteParam param = new ICNSWriteParam();
+		param.setDevicePixelRatio(1);
+		
+		ICNSImageWriter writer = lookupImageWriter();
+		ImageOutputStream ios = ImageIO.createImageOutputStream(baos);
+		writer.setOutput(ios);
+		writer.write(null, new IIOImage(i, null, null), param);
+		ios.close();
+		
+		Assert.assertTrue(baos.toString().contains("ic09"));
+	}
+	
+	@Test
+	public void test_file_type_ic14() throws IOException {
+		BufferedImage i = createExampleImage(512);
+		
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		
+		ICNSWriteParam param = new ICNSWriteParam();
+		param.setDevicePixelRatio(2);
+		
+		ICNSImageWriter writer = lookupImageWriter();
+		ImageOutputStream ios = ImageIO.createImageOutputStream(baos);
+		writer.setOutput(ios);
+		writer.write(null, new IIOImage(i, null, null), param);
+		ios.close();
+		
+		Assert.assertTrue(baos.toString().contains("ic14"));
+	}
+	
+	@Test
+	public void test_file_type_icp4() throws IOException {
+		BufferedImage i = createExampleImage(16);
+		
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		
+		ICNSWriteParam param = new ICNSWriteParam();
+		
+		ICNSImageWriter writer = lookupImageWriter();
+		ImageOutputStream ios = ImageIO.createImageOutputStream(baos);
+		writer.setOutput(ios);
+		writer.write(null, new IIOImage(i, null, null), param);
+		ios.close();
+		
+		Assert.assertTrue(baos.toString().contains("icp4"));
+	}
+
+	private ICNSImageWriter lookupImageWriter() {
+		Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("ICNS");
+		return (ICNSImageWriter) writers.next();
 	}
 
 	private BufferedImage createExampleImage(int width) {
