@@ -8,7 +8,7 @@
   <artifactId>imageio-icns</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>imageio-icnf</name>
+  <name>imageio-icns</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
