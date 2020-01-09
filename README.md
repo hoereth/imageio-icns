@@ -32,5 +32,5 @@ param.setDevicePixelRatio(1); // default = 2
 // An exception will be thrown otherwise.
 BufferedImage image;
 ...
-boolean success = ImageIO.write(i, "ICNS", new File("icon.icns"));
+boolean foundWriter = ImageIO.write(i, "ICNS", new File("icon.icns"));
 ```
