@@ -24,14 +24,14 @@ import de.pentabyte.imageio.icns.ICNSWriteParam;
 public class ICNSWriterTest {
 	@Test
 	public void test_registration() {
-		Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("ICNS");
+		Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(ICNS.NAME);
 		Assert.assertTrue(writers.hasNext());
 	}
 
 	@Test
 	public void createICNSfromPng() throws IOException {
 		BufferedImage i = createExampleImage(64);
-		boolean success = ImageIO.write(i, "ICNS", new ByteArrayOutputStream());
+		boolean success = ImageIO.write(i, ICNS.NAME, new ByteArrayOutputStream());
 		Assert.assertTrue("no writer has been found", success);
 	}
 	
@@ -50,7 +50,7 @@ public class ICNSWriterTest {
 		writer.write(null, new IIOImage(i, null, null), param);
 		ios.close();
 		
-		Assert.assertTrue(baos.toString().contains("ic09"));
+		Assert.assertTrue(baos.toString().contains(OSType.ic09.name()));
 	}
 	
 	@Test
@@ -68,7 +68,7 @@ public class ICNSWriterTest {
 		writer.write(null, new IIOImage(i, null, null), param);
 		ios.close();
 		
-		Assert.assertTrue(baos.toString().contains("ic14"));
+		Assert.assertTrue(baos.toString().contains(OSType.ic14.name()));
 	}
 	
 	@Test
@@ -85,11 +85,11 @@ public class ICNSWriterTest {
 		writer.write(null, new IIOImage(i, null, null), param);
 		ios.close();
 		
-		Assert.assertTrue(baos.toString().contains("icp4"));
+		Assert.assertTrue(baos.toString().contains(OSType.icp4.name()));
 	}
 
 	private ICNSImageWriter lookupImageWriter() {
-		Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("ICNS");
+		Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(ICNS.NAME);
 		return (ICNSImageWriter) writers.next();
 	}
 
