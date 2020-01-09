@@ -1,4 +1,4 @@
-# ImageIO ICNS
+# ICNS-Plugin for javax.imageio.ImageIO
 
 Allows Java's ImageIO to write the [Apple Icon Image Format](https://en.wikipedia.org/wiki/Apple_Icon_Image_format).
 
