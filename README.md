@@ -1,8 +1,8 @@
-# ICNS-Plugin (javax.imageio.ImageIO)
+# ICNS-Plugin for javax.imageio.ImageIO
 
 Allows Java's ImageIO to write the [Apple Icon Image Format](https://en.wikipedia.org/wiki/Apple_Icon_Image_format).
 
-Restrictions: Only one resolution will be included in the output file. Reading is not supported, just writing.
+Restrictions: Only one resolution will be included in the output file. Reading is **not** supported, just **writing**.
 
 ## Acceptable Input Image Dimensions
 
