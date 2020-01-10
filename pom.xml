@@ -31,7 +31,7 @@
 
 	<scm>
 		<url>https://github.com/hoereth/imageio-icns</url>
-		<connection>scm:git:hoereth@github.com:hoereth/imageio-icns.git</connection>
+		<connection>scm:git:ssh@github.com:hoereth/imageio-icns.git</connection>
 		<tag>imageio-icns-1.0</tag>
 	</scm>
 
