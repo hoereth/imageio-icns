@@ -23,6 +23,13 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-compress</artifactId>
+	    <version>1.19</version>
+	    <scope>test</scope>
+	</dependency>
   </dependencies>
 
   <build>

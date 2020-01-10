@@ -88,12 +88,12 @@ public class ICNSWriterTest {
 		Assert.assertTrue(baos.toString().contains(OSType.icp4.name()));
 	}
 
-	private ICNSImageWriter lookupImageWriter() {
+	public static ICNSImageWriter lookupImageWriter() {
 		Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName(ICNS.NAME);
 		return (ICNSImageWriter) writers.next();
 	}
 
-	private BufferedImage createExampleImage(int width) {
+	public static BufferedImage createExampleImage(int width) {
 		BufferedImage image = new BufferedImage(width, width, BufferedImage.TYPE_INT_ARGB);
 		Graphics2D g = image.createGraphics();
 
