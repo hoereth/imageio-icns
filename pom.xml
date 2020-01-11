@@ -8,6 +8,7 @@
 	<version>1.2-SNAPSHOT</version>
 
 	<name>imageio-icns</name>
+	<description>🍏 ImageIO Plugin for writing ICNS (Apple Icon) Images</description>
 	<url>https://github.com/hoereth/imageio-icns</url>
 	<inceptionYear>2020</inceptionYear>
 
