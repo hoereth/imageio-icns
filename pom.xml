@@ -8,6 +8,7 @@
 	<version>1.1-SNAPSHOT</version>
 
 	<name>imageio-icns</name>
+	<url>https://github.com/hoereth/imageio-icns</url>
 	<inceptionYear>2020</inceptionYear>
 
 	<licenses>
