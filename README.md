@@ -5,6 +5,17 @@ Allows Java's ImageIO framework to write the [Apple Icon Image Format](https://e
 
 Restrictions: Only one resolution will be included in the output file. Reading is **not** supported, just **writing**.
 
+## Maven Coordinates
+
+```xml
+<!-- https://mvnrepository.com/artifact/de.pentabyte/imageio-icns -->
+<dependency>
+    <groupId>de.pentabyte</groupId>
+    <artifactId>imageio-icns</artifactId>
+    <version>1.3</version>
+</dependency>
+```
+
 ## Acceptable Input Image Dimensions
 
 | pixel size | @1x ICNS type | @2x ICNS type   |
