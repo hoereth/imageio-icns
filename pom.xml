@@ -5,7 +5,7 @@
 
 	<groupId>de.pentabyte</groupId>
 	<artifactId>imageio-icns</artifactId>
-	<version>1.1</version>
+	<version>1.2-SNAPSHOT</version>
 
 	<name>imageio-icns</name>
 	<url>https://github.com/hoereth/imageio-icns</url>
@@ -34,7 +34,7 @@
 		<url>https://github.com/hoereth/imageio-icns</url>
 		<connection>scm:git:ssh://git@github.com/hoereth/imageio-icns.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/hoereth/imageio-icns.git</developerConnection>
-		<tag>imageio-icns-1.1</tag>
+		<tag>imageio-icns-1.0</tag>
 	</scm>
 
 	<properties>
