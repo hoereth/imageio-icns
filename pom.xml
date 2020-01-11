@@ -5,7 +5,7 @@
 
 	<groupId>de.pentabyte</groupId>
 	<artifactId>imageio-icns</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 
 	<name>imageio-icns</name>
 	<inceptionYear>2020</inceptionYear>
