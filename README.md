@@ -29,9 +29,12 @@ param.setDevicePixelRatio(1); // default = 2
 ## Example
 
 ```java
+// You need to reference the library at least once
+// to kick off auto service-discovery.
+import de.pentabyte.imageio.icns.ICNS;
 // Image must be sized to fit one of the allowed dimensions.
 // An exception will be thrown otherwise.
 BufferedImage image;
 ...
-boolean foundWriter = ImageIO.write(i, "ICNS", new File("icon.icns"));
+boolean foundWriter = ImageIO.write(i, ICNS.NAME, new File("icon.icns"));
 ```
