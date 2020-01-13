@@ -31,7 +31,10 @@ param.setDevicePixelRatio(1); // default = 2
 ```java
 // Image must be sized to fit one of the allowed dimensions.
 // An exception will be thrown otherwise.
-BufferedImage image;
-...
-boolean foundWriter = ImageIO.write(i, "ICNS", new File("icon.icns"));
+BufferedImage i = createExampleImage(64);
+boolean success = ImageIO.write(i, ICNS.NAME, new FileOutputStream("src/test/resources/example.icns"));
+Assert.assertTrue("no writer has been found", success);
 ```
+This example from [ICNSWriterTest](src/test/java/de/pentabyte/imageio.icns/ICNSWriterTest.java) will produce:
+
+![example.icns](src/test/resources/example.icns)

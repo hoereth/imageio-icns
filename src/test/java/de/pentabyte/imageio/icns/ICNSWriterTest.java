@@ -4,9 +4,11 @@ import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.RoundRectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Iterator;
 
@@ -29,9 +31,9 @@ public class ICNSWriterTest {
 	}
 
 	@Test
-	public void createICNSfromPng() throws IOException {
+	public void createExample() throws IOException {
 		BufferedImage i = createExampleImage(64);
-		boolean success = ImageIO.write(i, ICNS.NAME, new ByteArrayOutputStream());
+		boolean success = ImageIO.write(i, ICNS.NAME, new FileOutputStream("src/test/resources/example.icns"));
 		Assert.assertTrue("no writer has been found", success);
 	}
 	
@@ -100,7 +102,9 @@ public class ICNSWriterTest {
 		g.setComposite(AlphaComposite.Src);
 		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g.setColor(Color.MAGENTA);
-		g.fill(new RoundRectangle2D.Float(0, 0, width, width, 10, 10));
+		g.fill(new RoundRectangle2D.Float(0, 0, width, width, width / 3, width / 3));
+		g.setColor(Color.BLACK);
+		g.fill(new Ellipse2D.Double(width / 4, width / 4, width / 2, width / 2));
 
 		// ... then compositing the image on top,
 		// using the white shape from above as alpha source
